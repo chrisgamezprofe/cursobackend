@@ -22,7 +22,7 @@ app.use(express.json())
 const connect = async () =>{
   try {
     const myConn = await mongoose.connect(process.env.MONGO);
-    console.log("Conectado a mongo DB")
+    console.log("Conectado a mongo DB desde ee sever")
   } catch (error) {
     console.log(error)
   }
@@ -54,7 +54,7 @@ app.use((err,req,res,next)=>{
 
 app.listen(port, () => {
   connect()
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Escuchando el puerto ${port}`)
 })
 
 
